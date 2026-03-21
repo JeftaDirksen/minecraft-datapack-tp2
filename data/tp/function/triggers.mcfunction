@@ -46,3 +46,9 @@ scoreboard players enable @a tp-spawn
 execute as @a[scores={tp-spawn=1..,tp-cooldown=1..}] run tellraw @s ["",{"text":"Can't do that just yet, wait ","color":"red"},{"score":{"name":"@s","objective":"tp-cooldown"},"color":"red"},{"text":" sec.","color":"red"}]
 execute as @a[scores={tp-spawn=1..,tp-cooldown=0}] run function tp:spawn
 scoreboard players reset @a[scores={tp-spawn=1..}] tp-spawn
+
+# Random trigger
+scoreboard players enable @a tp-random
+execute as @a[scores={tp-random=1..,tp-cooldown=1..}] run tellraw @s ["",{"text":"Can't do that just yet, wait ","color":"red"},{"score":{"name":"@s","objective":"tp-cooldown"},"color":"red"},{"text":" sec.","color":"red"}]
+execute as @a[scores={tp-random=1..,tp-cooldown=0}] run function tp:random
+scoreboard players reset @a[scores={tp-random=1..}] tp-random

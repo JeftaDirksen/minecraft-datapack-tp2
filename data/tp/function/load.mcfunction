@@ -29,6 +29,9 @@ scoreboard objectives add tp-home-d dummy
 # Spawn
 scoreboard objectives add tp-spawn trigger "Teleport to spawn"
 
+# Random
+scoreboard objectives add tp-random trigger "Teleport to random location"
+
 # General
 scoreboard objectives add tp-show trigger "Show available commands"
 scoreboard objectives add tp-cooldown dummy
