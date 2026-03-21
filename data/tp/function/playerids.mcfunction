@@ -1,4 +1,4 @@
-schedule function tpa:playerids 1s
+schedule function tp:playerids 1s
 
 scoreboard players add @a tpa-id 0
 scoreboard players operation #playerids tpa-id > @a tpa-id

@@ -4,4 +4,4 @@ tellraw @s ["",{text:"Waiting for ",color:"green"},{selector:"@a[tag=tpa-target]
 tellraw @a[tag=tpa-target] ["",{text:"Player ",color:"green"},{selector:"@a[tag=tpa-source]",color:"aqua"},{text:" wants to teleport to you, do you ",color:"green"},{text:"ACCEPT",color:"yellow",underlined:true,click_event:{action:"run_command",command:"/trigger tpa-accept"}},{text:"?",color:"green"}]
 scoreboard players enable @a[tag=tpa-source] tpa-cancel
 scoreboard players enable @a[tag=tpa-target] tpa-accept
-schedule function tpa:tpa-expire 30s
+schedule function tp:tpa-expire 30s
