@@ -27,6 +27,7 @@ scoreboard objectives add tp-home-z dummy
 scoreboard objectives add tp-home-d dummy
 
 # General
+scoreboard objectives add tp-show trigger "Show available commands"
 scoreboard objectives add tp-cooldown dummy
 scoreboard objectives add tp-onjoin dummy
 function tp:triggers

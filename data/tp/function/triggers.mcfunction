@@ -1,5 +1,10 @@
 schedule function tp:triggers 5
 
+# Show
+scoreboard players enable @a tp-show
+execute as @a[scores={tp-show=1..}] run function tp:show
+scoreboard players reset @a[scores={tp-show=1..}] tp-show
+
 # TPA trigger
 scoreboard players enable @a tpa
 scoreboard players add @a tpa 0
@@ -32,6 +37,6 @@ scoreboard players reset @a[scores={tp-home=1..}] tp-home
 scoreboard players enable @a tp-back
 scoreboard players add @a[scores={tp-back=1..}] tp-back-y 0
 execute as @a[scores={tp-back=1..,tp-back-y=1..,tp-cooldown=1..}] run tellraw @s ["",{"text":"Can't do that just yet, wait ","color":"red"},{"score":{"name":"@s","objective":"tp-cooldown"},"color":"red"},{"text":" sec.","color":"red"}]
-tellraw @a[scores={tp-back=1..,tp-back-y=0}] ["",{"text":"Nowhere to go back to","color":"red"}]
+tellraw @a[scores={tp-back=1..,tp-back-y=0}] ["",{text:"Nowhere to go back to",color:"red"}]
 execute as @a[scores={tp-back=1..,tp-back-y=1..,tp-cooldown=0}] run function tp:back
 scoreboard players reset @a[scores={tp-back=1..}] tp-back

@@ -26,5 +26,5 @@ execute as @s[scores={tp-diff-z=..-1}] run function tp:-z
 # Center on block
 execute at @s align xyz run tp @s ~.5 ~.5 ~.5
 
-scoreboard players set @s tp-cooldown 60
-tellraw @s ["",{text:"Teleported back",color:"green"}]
+scoreboard players set @s tp-cooldown 10
+tellraw @s ["",{text:"Teleported back (",color:"green"},{text:"Go back",color:"yellow",bold:true,click_event:{action:"run_command",command:"/trigger tp-back"}},{text:")",color:"green"}]

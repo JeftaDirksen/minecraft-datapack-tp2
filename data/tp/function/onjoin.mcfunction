@@ -7,6 +7,9 @@ scoreboard players add @a tp-onjoin 0
 tag @a[scores={tp-onjoin=0}] remove tpa-source
 tag @a[scores={tp-onjoin=0}] remove tpa-target
 
+# Message
+tellraw @a[scores={tp-onjoin=0}] ["",{text:"Teleport commands: ",color:"green"},{text:"Show",color:"yellow",bold:true,click_event:{action:"run_command",command:"/trigger tp-show"}}]
+
 # Set onjoin score to 1 only for online players
 scoreboard players set * tp-onjoin 0
 scoreboard players set @a tp-onjoin 1
