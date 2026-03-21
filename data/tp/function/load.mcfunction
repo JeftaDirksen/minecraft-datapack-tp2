@@ -40,3 +40,4 @@ function tp:triggers
 function tp:playerids
 function tp:onjoin
 function tp:cooldown
+function tp:message
